@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+body {
+  /* Add background and font styles for the entire page */
+  background: linear-gradient(135deg, #ff8500, #ffdd1a);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  /* Style for all input fields */
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.search-container {
+  /* Style the container for the search bar */
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input,
+.search-container .suggestions {
+  /* Add shared styles for input and suggestions */
+  width: 100%; /* Full width */
+}
+
+.search-container input {
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.search-container .suggestions {
+  /* Additional styles for the suggestions container within the container */
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  /* Basic styles for unordered lists */
+  list-style-type: none;
+  padding: 0;
+}
+
+  ul.has-suggestions {
+    /* Styles for the suggestions list when it has items */
+    border: 1px solid #ccc; /* Add a border to differentiate it */
+    border-radius: 5px; /* Rounded corners */
+    max-height: 150px; /* Limit the height to create a scrollable area */
+    overflow-y: auto; /* Add vertical scrollbar when needed */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+ul li {
+  /* Styles for list items */
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  /* Styles for list items on hover */
+  background-color: #f0f0f0;
+}
